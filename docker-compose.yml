@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: go-todo
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: $DB_PASSWORD
+    ports:
+    - "5432:5432"
